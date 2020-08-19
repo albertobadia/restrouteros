@@ -7,6 +7,7 @@ from .interface_ethernet import interface_ethernet_router
 from .interface_eoip import interface_eoip_router
 from .interface_ipip import interface_ipip_router
 from .interface_gre import interface_gre_router
+from .interface_vlan import interface_vlan_router
 
 interface_router = APIRouter()
 
@@ -43,4 +44,9 @@ interface_router.include_router(
 interface_router.include_router(
     interface_gre_router,
     prefix="/gre"
+)
+
+interface_router.include_router(
+    interface_vlan_router,
+    prefix="/vlan"
 )
