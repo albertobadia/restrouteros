@@ -6,6 +6,7 @@ from .interface_list_member import interface_list_member_router
 from .interface_ethernet import interface_ethernet_router
 from .interface_eoip import interface_eoip_router
 from .interface_ipip import interface_ipip_router
+from .interface_gre import interface_gre_router
 
 interface_router = APIRouter()
 
@@ -37,4 +38,9 @@ interface_router.include_router(
 interface_router.include_router(
     interface_ipip_router,
     prefix="/ipip"
+)
+
+interface_router.include_router(
+    interface_gre_router,
+    prefix="/gre"
 )
