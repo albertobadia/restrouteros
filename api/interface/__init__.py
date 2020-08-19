@@ -9,6 +9,7 @@ from .interface_ipip import interface_ipip_router
 from .interface_gre import interface_gre_router
 from .interface_vlan import interface_vlan_router
 from .interface_vrrp import interface_vrrp_router
+from .interface_bonding import interface_bonding_router
 
 
 interface_router = APIRouter()
@@ -57,4 +58,9 @@ interface_router.include_router(
 interface_router.include_router(
     interface_vrrp_router,
     prefix="/vrrp"
+)
+
+interface_router.include_router(
+    interface_bonding_router,
+    prefix="/bonding"
 )
