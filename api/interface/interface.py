@@ -2,9 +2,9 @@ from fastapi import APIRouter
 from device import DEVICE
 from api import get_filters_list
 
-interface_router = APIRouter()
+_interface_router = APIRouter()
 
-@interface_router.get("/")
+@_interface_router.get("/")
 def get_interface(
     _id: str = "", name: str = "", default_name: str = "", _type: str = "", mtu: str = "",
     actual_mtu: str = "", l2mtu: str = "", max_l2mtu: str = "", mac_address: str = "",

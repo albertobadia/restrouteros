@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from .interface import interface_router
+from .interface import _interface_router
 from .interface_list import interface_list_router
 from .interface_list_member import interface_list_member_router
 from .interface_ethernet import interface_ethernet_router
@@ -21,8 +21,8 @@ from .interface_bridge_nat import interface_bridge_nat_router
 interface_router = APIRouter()
 
 
-interface_eoip_router.include_router(
-    interface_router,
+interface_router.include_router(
+    _interface_router,
     prefix=""
 )
 
