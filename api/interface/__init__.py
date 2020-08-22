@@ -15,6 +15,7 @@ from .interface_bridge_port import interface_bridge_port_router
 from .interface_bridge_vlan import interface_bridge_vlan_router
 from .interface_bridge_msti import interface_bridge_msti_router
 from .interface_bridge_filter import interface_bridge_filter_router
+from .interface_bridge_nat import interface_bridge_nat_router
 
 
 interface_router = APIRouter()
@@ -93,4 +94,9 @@ interface_router.include_router(
 interface_router.include_router(
     interface_bridge_filter_router,
     prefix="/bridge/filter"
+)
+
+interface_router.include_router(
+    interface_bridge_nat_router,
+    prefix="/bridge/nat"
 )
