@@ -3,9 +3,9 @@ from librouteros.query import Key
 from device import DEVICE
 from api import get_filters_list
 
-interface_bridge_router = APIRouter()
+_root_router = APIRouter()
 
-@interface_bridge_router.get("/")
+@_root_router.get("/")
 def get_interface_bridge(
     _id: str = "", name: str = "", mtu: str = "", actual_mtu: str = "", l2mtu: str = "", arp: str = "",
     arp_timeout: str = "", mac_address: str = "", protocol_mode: str = "", fast_forward: str = "",

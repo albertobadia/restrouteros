@@ -3,9 +3,9 @@ from librouteros.query import Key
 from device import DEVICE
 from api import get_filters_list
 
-interface_bridge_msti_router = APIRouter()
+msti_router = APIRouter()
 
-@interface_bridge_msti_router.get("/")
+@msti_router.get("/")
 def get_interface_bridge_msti(
     _id: str = "", identifier: str = "", bridge: str = "", priority: str = "", vlan_mapping: str = "",
     disabled: str = ""

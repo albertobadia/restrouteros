@@ -3,9 +3,9 @@ from librouteros.query import Key
 from device import DEVICE
 from api import get_filters_list
 
-interface_bridge_vlan_router = APIRouter()
+vlan_router = APIRouter()
 
-@interface_bridge_vlan_router.get("/")
+@vlan_router.get("/")
 def get_interface_bridge_vlan(
     _id: str = "", bridge: str = "", vlan_ids: str = "", tagged: str = "", untagged: str = "",
     current_tagged: str = "", current_untagged: str = "", dynamic: str = "", disabled: str = ""
