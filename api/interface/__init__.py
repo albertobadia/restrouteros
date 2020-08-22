@@ -11,6 +11,7 @@ from .interface_vlan import interface_vlan_router
 from .interface_vrrp import interface_vrrp_router
 from .interface_bonding import interface_bonding_router
 from .interface_bridge import interface_bridge_router
+from .interface_bridge_port import interface_bridge_port_router
 
 
 interface_router = APIRouter()
@@ -69,4 +70,9 @@ interface_router.include_router(
 interface_router.include_router(
     interface_bridge_router,
     prefix="/bridge"
+)
+
+interface_router.include_router(
+    interface_bridge_port_router,
+    prefix="/bridge/port"
 )
