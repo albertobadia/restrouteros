@@ -4,7 +4,7 @@ from api import get_filters_list
 
 nstreme_dual_router = APIRouter()
 
-@nstreme_dual_router.get("/")
+@nstreme_dual_router.get("/", tags=["wireless"])
 def get_interface_wireless_nstreme_dual(
     dead: str = "", _id: str = "", nextid: str = "", arp: str = "", arp_timeout: str = "", comment: str = "",
     disable_csma: str = "", disable_running_check: str = "", disabled: str = "", framer_limit: str = "",

@@ -5,7 +5,7 @@ from api import get_filters_list
 
 interface_ethernet_router = APIRouter()
 
-@interface_ethernet_router.get("/")
+@interface_ethernet_router.get("/", tags=["interface"])
 def get_interface_ethernet(
     _id: str = "", name: str = "", default_name: str = "", mtu: str = "", l2mtu: str = "",
     mac_address: str = "", orig_mac_address: str = "", arp: str = "", arp_timeout: str = "",

@@ -4,7 +4,7 @@ from api import get_filters_list
 
 _root_router = APIRouter()
 
-@_root_router.get("/")
+@_root_router.get("/", tags=["interface"])
 def get_interface(
     _id: str = "", name: str = "", default_name: str = "", _type: str = "", mtu: str = "",
     actual_mtu: str = "", l2mtu: str = "", max_l2mtu: str = "", mac_address: str = "",

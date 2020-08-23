@@ -5,7 +5,7 @@ from api import get_filters_list
 
 interface_list_router = APIRouter()
 
-@interface_list_router.get("/")
+@interface_list_router.get("/", tags=["interface"])
 def get_interface_list(
     _id: str = "", name: str = "", dynamic: str = "", include: str = "", exclude: str = "",
     builtin: str = "", comment: str = ""

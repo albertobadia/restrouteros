@@ -5,7 +5,7 @@ from api import get_filters_list
 
 interface_bonding_router = APIRouter()
 
-@interface_bonding_router.get("/")
+@interface_bonding_router.get("/", tags=["interface"])
 def get_interface_bonding(
     _id: str = "", name: str = "", mtu: str = "", mac_address: str = "", arp: str = "", arp_timeout: str = "",
     slaves: str = "", mode: str = "", primary: str = "", link_monitoring: str = "", arp_interval: str = "",

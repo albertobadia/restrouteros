@@ -4,7 +4,7 @@ from api import get_filters_list
 
 access_list_router = APIRouter()
 
-@access_list_router.get("/")
+@access_list_router.get("/", tags=["wireless"])
 def get_interface_wireless_access_list(
     _id: str = "", mac_address: str = "", interface: str = "", signal_range: str = "", allow_signal_out_of_range: str = "",
     authentication: str = "", forwarding: str = "", ap_tx_limit: str = "", client_tx_limit: str = "", private_algo: str = "",

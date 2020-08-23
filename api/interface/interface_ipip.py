@@ -5,7 +5,7 @@ from api import get_filters_list
 
 interface_ipip_router = APIRouter()
 
-@interface_ipip_router.get("/")
+@interface_ipip_router.get("/", tags=["interface"])
 def get_interface_ipip(
     _id: str = "", name: str = "", mtu: str = "", actual_mtu: str = "", local_address: str = "",
     remote_address: str = "", current_remote_address: str = "", keepalive: str = "", dscp: str = "",

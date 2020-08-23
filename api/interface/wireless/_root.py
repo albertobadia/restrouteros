@@ -4,7 +4,7 @@ from api import get_filters_list
 
 _root_router = APIRouter()
 
-@_root_router.get("/")
+@_root_router.get("/", tags=["wireless"])
 def get_interface_wireless(
     _id: str = "", default_name: str = "", name: str = "", mtu: str = "", l2mtu: str = "", mac_address: str = "",
     arp: str = "", arp_timeout: str = "", disable_running_check: str = "", interface_type: str = "",

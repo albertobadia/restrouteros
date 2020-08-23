@@ -5,7 +5,7 @@ from api import get_filters_list
 
 msti_router = APIRouter()
 
-@msti_router.get("/")
+@msti_router.get("/", tags=["bridge"])
 def get_interface_bridge_msti(
     _id: str = "", identifier: str = "", bridge: str = "", priority: str = "", vlan_mapping: str = "",
     disabled: str = ""

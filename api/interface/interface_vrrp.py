@@ -5,7 +5,7 @@ from api import get_filters_list
 
 interface_vrrp_router = APIRouter()
 
-@interface_vrrp_router.get("/")
+@interface_vrrp_router.get("/", tags=["interface"])
 def get_interface_vrrp(
     _id: str = "", name: str = "", mtu: str = "", mac_address: str = "", arp: str = "", arp_timeout: str = "",
     interface: str = "", vrid: str = "", priority: str = "", interval: str = "", preemption_mode: str = "",

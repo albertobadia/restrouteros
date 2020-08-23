@@ -5,7 +5,7 @@ from api import get_filters_list
 
 filter_router = APIRouter()
 
-@filter_router.get("/")
+@filter_router.get("/", tags=["bridge"])
 def get_interface_bridge_filter(
     _id: str = "", chain: str = "", action: str = "", log: str = "", log_prefix: str = "", bytes: str = "",
     packets: str = "", invalid: str = "", dynamic: str = "", disabled: str = ""

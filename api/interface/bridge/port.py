@@ -5,7 +5,7 @@ from api import get_filters_list
 
 port_router = APIRouter()
 
-@port_router.get("/")
+@port_router.get("/", tags=["bridge"])
 def get_interface_bridge_port(
     _id: str = "", nextid: str = "", interface: str = "", bridge: str = "", priority: str = "",
     path_cost: str = "", internal_path_cost: str = "", edge: str = "", point_to_point: str = "", learn: str = "",

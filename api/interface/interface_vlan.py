@@ -5,7 +5,7 @@ from api import get_filters_list
 
 interface_vlan_router = APIRouter()
 
-@interface_vlan_router.get("/")
+@interface_vlan_router.get("/", tags=["interface"])
 def get_interface_vlan(
     _id: str = "", name: str = "", mtu: str = "", l2mtu: str = "", mac_address: str = "", arp: str = "",
     arp_timeout: str = "", loop_protect: str = "", loop_protect_status: str = "",
